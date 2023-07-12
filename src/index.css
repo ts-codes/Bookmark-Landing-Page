@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-accordion-item:hover > button > h4 {
+    @apply text-theme-red;
+}
+
+.custom-accordion-item:first-of-type {
+    @apply border-t-0 md:border-t-[1px];
+}
+
+.custom-accordion-item:last-of-type {
+    @apply border-b-[1px] border-b-gray-400/50;
+}
+
+.custom-card:nth-of-type(2) {
+    @media screen and (min-width: 1024px) {
+        margin-top: 40px;
+    }
+}
+
+.custom-card:nth-of-type(3) {
+    @media screen and (min-width: 1024px) {
+        margin-top: 80px;
+    }
+}
