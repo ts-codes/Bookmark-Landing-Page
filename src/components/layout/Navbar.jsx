@@ -53,7 +53,7 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li>
-                    <button className="h-10 text-sm text-white uppercase transition-all ease-in-out bg-theme-red border-2 border-theme-red rounded shadow-lg cursor-pointer select-none hover:text-theme-red hover:bg-white w-28 duration-250">
+                    <button className="h-10 text-sm text-white uppercase transition-all ease-in-out border-2 rounded shadow-lg cursor-pointer select-none bg-theme-red border-theme-red hover:text-theme-red hover:bg-white w-28 duration-250">
                         LOGIN
                     </button>
                 </li>
@@ -86,19 +86,25 @@ const Navbar = () => {
                         <Line />
 
                         <li className="flex items-center justify-center w-full text-white uppercase">
-                            features
+                            <a href="#" onClick={toggleNav}>
+                                features
+                            </a>
                         </li>
 
                         <Line />
 
                         <li className="flex items-center justify-center w-full text-white uppercase">
-                            pricing
+                            <a href="#" onClick={toggleNav}>
+                                pricing
+                            </a>
                         </li>
 
                         <Line />
 
                         <li className="flex items-center justify-center w-full text-white uppercase">
-                            contact
+                            <a href="#" onClick={toggleNav}>
+                                contact
+                            </a>
                         </li>
 
                         <Line />
