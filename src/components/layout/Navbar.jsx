@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     hamburger,
     iconClose,
@@ -10,6 +10,13 @@ import {
 
 const Navbar = () => {
     const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
+
+    useEffect(() => {
+        const background = document.getElementById('root');
+        if (mobileNavIsOpen) {
+            background.classList.add('prevent-scroll');
+        } else background.classList.remove('prevent-scroll');
+    }, [mobileNavIsOpen]);
 
     const toggleNav = () => {
         setMobileNavIsOpen((prevState) => !prevState);
@@ -72,7 +79,7 @@ const Navbar = () => {
 
     const mobileMenu = (
         <>
-            <nav className=" min-h-screen md:hidden z-50 absolute top-0 left-0 right-0 flex flex-col bg-[#1E2339] bg-opacity-95 pt-3">
+            <nav className="overflow-y-auto min-h-screen md:hidden z-50 absolute top-0 left-0 right-0 flex flex-col bg-[#1E2339] bg-opacity-95 pt-3">
                 <div className="flex items-center justify-between px-4 py-6 md:px-10">
                     <img src={logoWhite} alt="logo" />
                     <img

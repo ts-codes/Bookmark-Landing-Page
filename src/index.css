@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.prevent-scroll {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
 .custom-accordion-item:hover > button > h4 {
     @apply text-theme-red;
 }
